@@ -5,6 +5,7 @@ import Header from './components/Header';
 import MainButtons from './components/MainButtons';
 import Timer from './components/Timer';
 import SpeaksDaily from './components/SpeaksDaily';
+import TeamAudience from './components/TeamAudience';
 
 class App extends Component {
   constructor(props) {
@@ -136,6 +137,7 @@ class App extends Component {
             stopTimer={this.stopTimer}
           />}
           </div>
+          {!showPerson && <TeamAudience />}
           {!showAnimation && showPerson
           && <SpeaksDaily />}
           {!showAnimation}
