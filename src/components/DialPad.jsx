@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-curly-spacing */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
@@ -15,23 +16,18 @@ class DialPad extends Component {
         {numbers.map((num) => (
           <button
             type="button"
-            key={ num }
-            onClick={ () => addTime(num) }
+            key={num}
+            onClick={() => addTime(num)}
           >
-            { num }
+            {num}
           </button>
         ))}
-        <button
-          type="button"
-          key="backspace"
-          className="fas fa-backspace"
-          id="del"
-          disabled
-        >
-          {' '}
+        <button type="button">
+          {/* <img className="dial-mercadopago" src={logoMercadoPago} alt="" /> */}
         </button>
-        <button type="button" key={ 0 } onClick={ () => addTime('0') }>0</button>
-        <button type="button" key="clear" id="clear" onClick={ reset }>C</button>
+
+        <button type="button" key={0} onClick={() => addTime('0')}>0</button>
+        <button type="button" key="clear" id="clear" onClick={reset}>C</button>
       </div>);
   }
 }

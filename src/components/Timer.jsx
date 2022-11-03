@@ -18,8 +18,6 @@ class Timer extends Component {
         <div className="dial-pad-container">
           <DialPad addTime={ addTime } reset={ reset } />
         </div>
-        {/* <button type="button" onClick={ this.startTimer }>start</button>
-        <button type="button" onClick={ this.pauseTimer }>pause</button> */}
       </div>
     );
   }

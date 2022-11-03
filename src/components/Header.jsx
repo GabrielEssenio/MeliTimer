@@ -5,10 +5,10 @@ class Header extends Component {
     return (
       <header>
         <h1>
-          There is
-          <span className="title-spotlight"> 1 Timer </span>
+          Team
+          <span className="title-spotlight"> Audience </span>
           {' '}
-          among us
+          Growth Tooling
         </h1>
       </header>
     );

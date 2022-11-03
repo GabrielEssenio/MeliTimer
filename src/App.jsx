@@ -1,10 +1,10 @@
+/* eslint-disable react/jsx-curly-spacing */
 import React, { Component } from 'react';
 import './App.css';
-import Footer from './components/Footer';
 import Header from './components/Header';
 import MainButtons from './components/MainButtons';
-import Stars from './components/Stars';
 import Timer from './components/Timer';
+import SpeaksDaily from './components/SpeaksDaily';
 
 class App extends Component {
   constructor(props) {
@@ -15,6 +15,7 @@ class App extends Component {
       timeIndex: 3,
       inputTime: ['0', '0', '0', '0'],
       showAnimation: false,
+      showPerson: false,
     };
     this.startTimer = this.startTimer.bind(this);
     this.pauseTimer = this.pauseTimer.bind(this);
@@ -50,6 +51,7 @@ class App extends Component {
     this.verifyMaxNumbers();
     const ONE_SECOND = 1000;
     const COUNTDOWN = 0;
+    this.setState({ showPerson: true });
     this.timerInterval = setInterval(() => {
       const { seconds, minutes } = this.state;
       if (seconds === 0 && minutes === 0) {
@@ -111,26 +113,33 @@ class App extends Component {
   }
 
   render() {
-    const { seconds, minutes, showAnimation } = this.state;
+    const { seconds, minutes, showAnimation, showPerson } = this.state;
     return (
-      <div className="App">
-        {showAnimation && <Stars />}
+      <div>
         {!showAnimation && <Header />}
-        {!showAnimation
-        && <Timer
-          sec={ seconds }
-          min={ minutes }
-          addTime={ this.addTime }
-          start={ this.startTimert }
-          reset={ this.stopTimer }
-        />}
-        {!showAnimation
-        && <MainButtons
-          startTimer={ this.startTimer }
-          pauseTimer={ this.pauseTimer }
-          stopTimer={ this.stopTimer }
-        />}
-        {!showAnimation && <Footer />}
+
+        <div className="content-app">
+
+          <div className="App">
+            {!showAnimation
+          && <Timer
+            sec={seconds}
+            min={minutes}
+            addTime={this.addTime}
+            start={this.startTimer}
+            reset={this.stopTimer}
+          />}
+            {!showAnimation
+          && <MainButtons
+            startTimer={this.startTimer}
+            pauseTimer={this.pauseTimer}
+            stopTimer={this.stopTimer}
+          />}
+          </div>
+          {!showAnimation && showPerson
+          && <SpeaksDaily />}
+          {!showAnimation}
+        </div>
       </div>
     );
   }
