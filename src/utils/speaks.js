@@ -21,7 +21,8 @@ import MarceloBrasil from '../images/MarceloBrasil.jpg';
 import PedroBrasil from '../images/PedroBrasil.jpg';
 import WincentyBrasil from '../images/WincentyBrasil.jpg';
 import YanBrasil from '../images/YanBrasil.jpg';
-// import Deyvid from '../images/DeyvidCori.png';
+import FernandaBrasil from '../images/FernandaBrasil.jpg';
+import DeyvidBrasil from '../images/DeyvidBrasil.jpg';
 
 // import B1 from '../images/B1.png';
 // import B2 from '../images/B2.png';
@@ -41,12 +42,12 @@ import YanBrasil from '../images/YanBrasil.jpg';
 
 const speaks = [
   {
-    name: 'Daniel Silva',
+    name: 'Daniel da Silva',
     image: DanielBrasil,
   },
   {
-    name: 'Gabriel Essênio',
-    image: GabrielBrasil,
+    name: 'Deyvid da Silva',
+    image: DeyvidBrasil,
   },
   {
     name: 'Barbara Flavia',
@@ -82,7 +83,15 @@ const speaks = [
   //   name: 'Angelica Oliveira',
   //   image: AngelicaBrasil,
   // },
+  {
+    name: 'Fernanda Andrade ',
+    image: FernandaBrasil,
+  },
 
+  {
+    name: 'Gabriel Essênio',
+    image: GabrielBrasil,
+  },
 ];
 
 // const speaks = [

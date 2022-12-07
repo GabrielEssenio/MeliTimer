@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
 
-class Header extends Component {
+class HeaderTbt extends Component {
   render() {
     return (
       <header>
         <h1>
-          Team
+          Throwback Thursday
           <span className="title-spotlight"> Audience </span>
-          Growth Tooling
         </h1>
       </header>
     );
   }
 }
 
-export default Header;
+export default HeaderTbt;

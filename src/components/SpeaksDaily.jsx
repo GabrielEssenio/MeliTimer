@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import speaks from '../utils/speaks';
 import '../App.css';
 
-const SpeaksDaily = () => {
+const SpeaksDaily = ({ showButton }) => {
   const [disable, setDistable] = React.useState(false);
   const [randomPerson, setRandomPerson] = React.useState(0);
 
@@ -16,6 +16,7 @@ const SpeaksDaily = () => {
   useEffect(() => {
     const rndInt = randomIntFromInterval(0, speaks.length - 1);
     console.log(rndInt);
+    console.log(speaks.length);
     setRandomPerson(rndInt);
   }, []);
 
@@ -39,14 +40,18 @@ const SpeaksDaily = () => {
           alt={ speaks[randomPerson].image }
         />
       </div>
-      <button
-        className="button-next-person"
-        onClick={ nextPerson }
-        type="button"
-        disabled={ disable }
-      >
-        Next
-      </button>
+      {showButton
+        ? (
+          <button
+            className="button-next-person"
+            onClick={ nextPerson }
+            type="button"
+            disabled={ disable }
+          >
+            Next
+          </button>
+        )
+        : <div />}
     </div>
   );
   return (
