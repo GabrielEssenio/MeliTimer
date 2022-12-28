@@ -8,9 +8,7 @@ const App = () => (
     <Routes>
       <Route path="/" element={ <TimerPage /> } />
       <Route path="/tbt" element={ <Tbt /> } />
-
     </Routes>
-    <p>oi</p>
   </div>
 );
 

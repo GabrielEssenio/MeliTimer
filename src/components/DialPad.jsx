@@ -23,7 +23,7 @@ class DialPad extends Component {
           </button>
         ))}
         <button type="button">
-          {/* <img className="dial-mercadopago" src={logoMercadoPago} alt="" /> */}
+          {/* <img src={logoMercadoPago} alt="" /> */}
         </button>
 
         <button type="button" key={0} onClick={() => addTime('0')}>0</button>

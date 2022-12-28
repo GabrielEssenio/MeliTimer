@@ -1,55 +1,54 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable max-len */
 /* eslint-disable no-magic-numbers */
 /* eslint-disable react/jsx-key */
 /* eslint-disable react/prop-types */
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import speaks from '../utils/speaks';
-import '../App.css';
+import * as S from '../styles/SpeaksDaily';
+import { speakDaily } from '../utils/speaks';
 
-const SpeaksDaily = ({ showButton }) => {
+const SpeaksDaily = ({ showButton, temas }) => {
+  if (temas.length === 0) {
+    temas = JSON.stringify(speakDaily);
+  }
   const [disable, setDistable] = React.useState(false);
   const [randomPerson, setRandomPerson] = React.useState(0);
+  const [arraySpeaks, setArraySpeaks] = React.useState(JSON.parse(temas));
 
   const randomIntFromInterval = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
   useEffect(() => {
-    const rndInt = randomIntFromInterval(0, speaks.length - 1);
-    console.log(rndInt);
-    console.log(speaks.length);
+    const rndInt = randomIntFromInterval(0, arraySpeaks.length - 1);
     setRandomPerson(rndInt);
   }, []);
 
   const nextPerson = () => {
-    if (speaks.length < 3) {
+    if (arraySpeaks.length < 3) {
       setDistable(true);
     }
-    speaks.splice(randomPerson, 1);
-    const rndInt = randomIntFromInterval(0, speaks.length - 1);
-    console.log(rndInt);
+    arraySpeaks.splice(randomPerson, 1);
+    const rndInt = randomIntFromInterval(0, arraySpeaks.length - 1);
     setRandomPerson(rndInt);
   };
 
   const speaker = (
     <div>
-      <div className="speaks-main">
-        <p className="speaks-name">{speaks[randomPerson].name}</p>
-        <img
-          className="speaks-image"
-          src={ speaks[randomPerson].image }
-          alt={ speaks[randomPerson].image }
+      <S.speaksMain>
+        <S.speaksName>{arraySpeaks[randomPerson].name}</S.speaksName>
+        <S.speaksImage
+          src={ arraySpeaks[randomPerson].image }
+          alt={ arraySpeaks[randomPerson].image }
         />
-      </div>
+      </S.speaksMain>
       {showButton
         ? (
-          <button
-            className="button-next-person"
+          <S.buttonNextPerson
             onClick={ nextPerson }
-            type="button"
             disabled={ disable }
           >
             Next
-          </button>
+          </S.buttonNextPerson>
         )
         : <div />}
     </div>

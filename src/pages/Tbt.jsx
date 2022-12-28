@@ -4,6 +4,7 @@ import HeaderTbt from '../components/HeaderTbt';
 import TeamAudience from '../components/TeamAudience';
 import SpeaksDaily from '../components/SpeaksDaily';
 import '../App.css';
+import * as T from '../styles/Tbt';
 
 const Tbt = () => {
   const [showPerson, setShowPerson] = React.useState(false);
@@ -13,9 +14,9 @@ const Tbt = () => {
   };
 
   return (
-    <div className="tbt-page">
+    <T.tbtPage>
       <HeaderTbt />
-      <div className="content-tbt">
+      <T.contentTbt>
         <div>
           <TeamAudience />
         </div>
@@ -24,26 +25,25 @@ const Tbt = () => {
           {showPerson
             ? (
               <div
-                className="tbt-person"
                 data-aos="zoom-in-down"
               >
                 <SpeaksDaily showButton={ false } />
               </div>
             )
             : (
-              <div className="tbt-button">
+              <T.tbtButton>
                 <button
                   className="button-86"
                   onClick={ randomTbt }
                   type="button"
                 >
-                  <p className="text-button-tbt">Choose a Person</p>
+                  <T.textButtonTbt>Choose a Person</T.textButtonTbt>
                 </button>
-              </div>
+              </T.tbtButton>
             )}
         </div>
-      </div>
-    </div>
+      </T.contentTbt>
+    </T.tbtPage>
   );
 };
 

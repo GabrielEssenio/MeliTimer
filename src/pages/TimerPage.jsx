@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable react/jsx-curly-spacing */
 import React, { Component } from 'react';
 import '../App.css';
@@ -6,6 +7,9 @@ import MainButtons from '../components/MainButtons';
 import Timer from '../components/Timer';
 import SpeaksDaily from '../components/SpeaksDaily';
 import TeamAudience from '../components/TeamAudience';
+import fotoAudience from '../images/Background/FotoAudience2.jpeg';
+
+import * as S from '../styles/TimerPage';
 
 class TimerPage extends Component {
   constructor(props) {
@@ -17,6 +21,8 @@ class TimerPage extends Component {
       inputTime: ['0', '0', '0', '0'],
       showAnimation: false,
       showPerson: false,
+      temas: [],
+      backgrounds: fotoAudience,
     };
     this.startTimer = this.startTimer.bind(this);
     this.pauseTimer = this.pauseTimer.bind(this);
@@ -24,6 +30,16 @@ class TimerPage extends Component {
     this.addTime = this.addTime.bind(this);
     this.convertToNumber = this.convertToNumber.bind(this);
     this.verifyMaxNumbers = this.verifyMaxNumbers.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleChangeBackGrounds = this.handleChangeBackGrounds.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({ temas: `${event.target.value}` });
+  }
+
+  handleChangeBackGrounds(event) {
+    this.setState({ backgrounds: `${event.target.value}` });
   }
 
   verifyMaxNumbers() {
@@ -113,13 +129,12 @@ class TimerPage extends Component {
   }
 
   render() {
-    const { seconds, minutes, showAnimation, showPerson } = this.state;
+    const { seconds, minutes, showAnimation, showPerson, temas, backgrounds } = this.state;
     return (
-      <div>
-        {!showAnimation && <Header />}
+      <S.mainContainer inputBackground={backgrounds}>
 
-        <div className="content-app">
-
+        <Header handleChange={this.handleChange} temas={temas} backgrounds={backgrounds} handleChangeBackGrounds={this.handleChangeBackGrounds} />
+        <S.contentApp>
           <div className="App">
             {!showAnimation
           && <Timer
@@ -138,10 +153,10 @@ class TimerPage extends Component {
           </div>
           {!showPerson && <TeamAudience />}
           {!showAnimation && showPerson
-          && <SpeaksDaily showButton />}
+          && <SpeaksDaily showButton temas={temas} backgrounds={backgrounds} />}
           {!showAnimation}
-        </div>
-      </div>
+        </S.contentApp>
+      </S.mainContainer>
     );
   }
 }

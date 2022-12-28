@@ -5,18 +5,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import '../App.css';
-import teamAudience from '../images/teamAudience.jpg';
+import teamAudience from '../images/Background/teamAudience.jpg';
+import * as S from '../styles/SpeaksDaily';
+import * as T from '../styles/TeamAudience';
 
 const TeamAudience = () => (
   <div>
-    <div className="speaks-main">
-      <p className="speaks-name">Team Audience</p>
-      <img
-        className="team-audience"
+    <S.speaksMain>
+      <S.speaksName>Team Audience</S.speaksName>
+      <T.teamAudience
         src={ teamAudience }
         alt={ teamAudience }
       />
-    </div>
+    </S.speaksMain>
   </div>
 );
 
