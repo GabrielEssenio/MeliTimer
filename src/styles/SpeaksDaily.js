@@ -11,7 +11,7 @@ justify-content: center;
 align-items: center;
 font-size: 2.5em;
 font-weight: bold;
-color: green;
+color: blue;
 `;
 
 export const speaksImage = styled.img`

@@ -12,7 +12,7 @@ header {
   font-family: "Raleway", serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to left, rgba(0, 238, 255, 0.721), rgb(0, 0, 0));
+  background-image: linear-gradient(to left, rgba(255, 222, 123, 0.987), rgb(171, 63, 0));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,7 +35,7 @@ a:hover {
 }
 
 .title-spotlight {
-  color: rgb(0, 255, 34);
+  color: rgb(35, 0, 175);
 }
 
 #root {
@@ -79,8 +79,6 @@ a:hover {
 .timer-container {
   margin-top: 40px;
   font-size: 3em;
-  /* color: rgb(251, 255, 0); */
-  /* color: rgb(13, 0, 255); */
   color: rgb(251, 255, 0);
   width: 48%;
 }
@@ -92,7 +90,6 @@ a:hover {
   justify-content: center;
   align-items: center;
   background-color: rgb(15, 52, 238);
-  /* background-color: rgb(251, 255, 0); */
   padding: 10px 5px;
 }
 
@@ -218,4 +215,35 @@ a:hover {
 .button-86:active::after {
   transition: 0s;
   transform: translate(0, 5%);
+}
+
+/* Estilização básica do select */
+select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  appearance: none;
+  background-color: rgb(37, 4, 146);
+  color: white
+}
+
+/* Mudança de cor da seta */
+select::after {
+  content: "▼";
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  pointer-events: none;
+  color: #999;
+}
+
+/* Remove a seta nativa */
+select:focus::after,
+select:active::after {
+  display: none;
+}
+
+.custom-select {
+  margin: 0px 30px 0px 30px;
 }

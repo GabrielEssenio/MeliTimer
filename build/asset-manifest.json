@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.3ec797c6.chunk.css",
-    "main.js": "/static/js/main.4a248f2c.chunk.js",
-    "main.js.map": "/static/js/main.4a248f2c.chunk.js.map",
+    "main.css": "/static/css/main.338c064f.chunk.css",
+    "main.js": "/static/js/main.6f833693.chunk.js",
+    "main.js.map": "/static/js/main.6f833693.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.b8464cae.js",
     "runtime-main.js.map": "/static/js/runtime-main.b8464cae.js.map",
-    "static/js/2.f7d596d3.chunk.js": "/static/js/2.f7d596d3.chunk.js",
-    "static/js/2.f7d596d3.chunk.js.map": "/static/js/2.f7d596d3.chunk.js.map",
+    "static/js/2.c490d896.chunk.js": "/static/js/2.c490d896.chunk.js",
+    "static/js/2.c490d896.chunk.js.map": "/static/js/2.c490d896.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.3ec797c6.chunk.css.map": "/static/css/main.3ec797c6.chunk.css.map",
-    "static/js/2.f7d596d3.chunk.js.LICENSE.txt": "/static/js/2.f7d596d3.chunk.js.LICENSE.txt",
+    "static/css/main.338c064f.chunk.css.map": "/static/css/main.338c064f.chunk.css.map",
+    "static/js/2.c490d896.chunk.js.LICENSE.txt": "/static/js/2.c490d896.chunk.js.LICENSE.txt",
     "static/media/Angelica.010f94fa.jpeg": "/static/media/Angelica.010f94fa.jpeg",
     "static/media/AngelicaBrasil.267974cc.jpg": "/static/media/AngelicaBrasil.267974cc.jpg",
     "static/media/AngelicaCrianca.4bd8f2a0.png": "/static/media/AngelicaCrianca.4bd8f2a0.png",
@@ -18,6 +18,7 @@
     "static/media/BarbaraBrasil.1afe8ac3.jpg": "/static/media/BarbaraBrasil.1afe8ac3.jpg",
     "static/media/BarbaraCrianca.4667832d.jpg": "/static/media/BarbaraCrianca.4667832d.jpg",
     "static/media/BarbaraShadow.dcc8ba33.png": "/static/media/BarbaraShadow.dcc8ba33.png",
+    "static/media/CasamentoYan.70017b07.png": "/static/media/CasamentoYan.70017b07.png",
     "static/media/Daniel.d1acd855.jpeg": "/static/media/Daniel.d1acd855.jpeg",
     "static/media/DanielBrasil.b2714e89.jpg": "/static/media/DanielBrasil.b2714e89.jpg",
     "static/media/DanielShadow.febc4ec8.png": "/static/media/DanielShadow.febc4ec8.png",
@@ -64,8 +65,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.b8464cae.js",
-    "static/js/2.f7d596d3.chunk.js",
-    "static/css/main.3ec797c6.chunk.css",
-    "static/js/main.4a248f2c.chunk.js"
+    "static/js/2.c490d896.chunk.js",
+    "static/css/main.338c064f.chunk.css",
+    "static/js/main.6f833693.chunk.js"
   ]
 }

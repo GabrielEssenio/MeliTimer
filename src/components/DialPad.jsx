@@ -28,7 +28,8 @@ class DialPad extends Component {
 
         <button type="button" key={0} onClick={() => addTime('0')}>0</button>
         <button type="button" key="clear" id="clear" onClick={reset}>C</button>
-      </div>);
+      </div>
+    );
   }
 }
 
