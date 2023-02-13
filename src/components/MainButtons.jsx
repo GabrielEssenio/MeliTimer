@@ -56,7 +56,8 @@ class MainButtons extends Component {
     return (
       <div className="main-buttons">
         {this.renderButtons()}
-      </div>);
+      </div>
+    );
   }
 }
 
