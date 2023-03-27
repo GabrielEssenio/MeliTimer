@@ -32,7 +32,7 @@ class Header extends Component {
             onChange={ handleChangeBackGrounds }
             className="custom-select"
           >
-            <option value={ fotoGrowth } selected>fotoGrowth</option>
+            <option value={ fotoGrowth } selected>Team Growth</option>
             <option value={ fotoAudience }>Team Audience</option>
             <option value={ brasilCopa }>Copa do Brasil</option>
             <option value={ diaDasCriancas } selected>Dia Das Crianças</option>
