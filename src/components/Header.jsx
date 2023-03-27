@@ -6,6 +6,8 @@ import brasilCopa from '../images/Background/copa2022.png';
 import diaDasCriancas from '../images/Background/dia-das-criancas.jpg';
 import fotoAudience from '../images/Background/FotoAudience2.jpeg';
 import casamentoYan from '../images/Background/CasamentoYan.png';
+import fotoGrowth from '../images/Background/fotoGrowth.jpeg';
+// import aniversarioDaniel from '../images/Background/AniversarioDaniel.png';
 
 class Header extends Component {
   render() {
@@ -30,6 +32,7 @@ class Header extends Component {
             onChange={ handleChangeBackGrounds }
             className="custom-select"
           >
+            <option value={ fotoGrowth } selected>fotoGrowth</option>
             <option value={ fotoAudience }>Team Audience</option>
             <option value={ brasilCopa }>Copa do Brasil</option>
             <option value={ diaDasCriancas } selected>Dia Das Crianças</option>
