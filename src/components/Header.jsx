@@ -7,7 +7,7 @@ import diaDasCriancas from '../images/Background/dia-das-criancas.jpg';
 import fotoAudience from '../images/Background/FotoAudience2.jpeg';
 import casamentoYan from '../images/Background/CasamentoYan.png';
 import fotoGrowth from '../images/Background/fotoGrowth.jpeg';
-// import aniversarioDaniel from '../images/Background/AniversarioDaniel.png';
+import aniversarioDaniel from '../images/Background/AniversarioDaniel.png';
 
 class Header extends Component {
   render() {
@@ -21,9 +21,8 @@ class Header extends Component {
           <option value={ JSON.stringify(speaksBrasil) }>Brasil</option>
         </select>
         <h1>
-          Daily
-          <span className="title-spotlight"> Team Audience </span>
-          Growth Tooling
+          Feliz Aniversário
+          <span className="title-spotlight">  Daniel</span>
         </h1>
         <div>
 
@@ -37,6 +36,7 @@ class Header extends Component {
             <option value={ brasilCopa }>Copa do Brasil</option>
             <option value={ diaDasCriancas } selected>Dia Das Crianças</option>
             <option value={ casamentoYan } selected>Casamento do Yan</option>
+            <option value={ aniversarioDaniel } selected>Aniversário Daniel</option>
           </select>
         </div>
       </header>
