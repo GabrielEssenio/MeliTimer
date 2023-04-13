@@ -7,7 +7,7 @@ import MainButtons from '../components/MainButtons';
 import Timer from '../components/Timer';
 import SpeaksDaily from '../components/SpeaksDaily';
 import TeamAudience from '../components/TeamAudience';
-import fotoAudience from '../images/Background/FotoAudience2.jpeg';
+import fotoGrowth from '../images/Background/fotoGrowth.jpeg';
 
 import * as S from '../styles/TimerPage';
 
@@ -22,7 +22,7 @@ class TimerPage extends Component {
       showAnimation: false,
       showPerson: false,
       temas: [],
-      backgrounds: fotoAudience,
+      backgrounds: fotoGrowth,
     };
     this.startTimer = this.startTimer.bind(this);
     this.pauseTimer = this.pauseTimer.bind(this);

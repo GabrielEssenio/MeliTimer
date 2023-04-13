@@ -12,13 +12,13 @@ header {
   font-family: "Raleway", serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to left, rgba(255, 222, 123, 0.987), rgb(171, 63, 0));
+  background-image: linear-gradient(to left, rgba(124, 6, 108, 0.987), rgb(0, 255, 217));
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
   width: 100%;
-  color: rgb(230, 255, 44);
+  color: rgb(0, 255, 217);
   height: 130px;
   font-weight: bold;
 }
@@ -35,7 +35,7 @@ a:hover {
 }
 
 .title-spotlight {
-  color: rgb(35, 0, 175);
+  color: rgb(0, 8, 255);
 }
 
 #root {
@@ -79,7 +79,7 @@ a:hover {
 .timer-container {
   margin-top: 40px;
   font-size: 3em;
-  color: rgb(251, 255, 0);
+  color: rgb(5, 218, 218);
   width: 48%;
 }
 
@@ -89,7 +89,7 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(15, 52, 238);
+  background-color: rgb(5, 218, 218);
   padding: 10px 5px;
 }
 
@@ -97,13 +97,13 @@ a:hover {
   width: 40px;
   height: 40px;
   margin: 2px;
-  border: 3px solid rgb(251, 255, 0);
+  border: 3px solid rgb(0, 8, 255);
   border-radius: 5px;
   font-size: 1.5em;
 }
 
 .dial-pad-container button:hover {
-  background-color: rgb(157, 0, 0);
+  background-color: rgb(204, 204, 204);
 }
 
 #clear {
@@ -119,7 +119,7 @@ a:hover {
   margin-bottom: 10px;
   padding: 5px 10px;
   border-radius: 5px;
-  background-color: rgb(251, 255, 0);
+  background-color: rgb(5, 218, 218);
   text-transform: uppercase;
   font-weight: 600;
   width: 40px;
@@ -185,7 +185,7 @@ a:hover {
   transform: translate(0%, 0%);
   width: 100%;
   height: 100%;
-  background: #28282d;
+  background: #040456;
   border-radius: 10px;
 }
 
@@ -220,12 +220,12 @@ a:hover {
 /* Estilização básica do select */
 select {
   padding: 10px;
-  font-size: 16px;
+  font-size: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
   appearance: none;
-  background-color: rgb(37, 4, 146);
-  color: white
+  background-color: rgb(5, 218, 218);
+  color: rgb(0, 2, 38)
 }
 
 /* Mudança de cor da seta */

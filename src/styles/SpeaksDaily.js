@@ -11,7 +11,7 @@ justify-content: center;
 align-items: center;
 font-size: 2.5em;
 font-weight: bold;
-color: blue;
+color: rgb(5, 218, 218);
 `;
 
 export const speaksImage = styled.img`
@@ -26,8 +26,8 @@ export const buttonNextPerson = styled.button`
     margin-bottom: 10px;
     padding: 5px 15px;
     border-radius: 5px;
-    background-color: rgb(251, 255, 0);
+    background-color: rgb(5, 218, 218);
     text-transform: uppercase;
-    font-weight: 650;
+    font-weight: 750;
     font-weight: bold;
 `;

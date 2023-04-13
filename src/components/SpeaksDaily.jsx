@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 /* eslint-disable max-len */
@@ -8,6 +9,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import * as S from '../styles/SpeaksDaily';
 import { speakDaily } from '../utils/speaks';
+import TheEnd from '../images/TheEnd/theend.jpg';
 
 const SpeaksDaily = ({ showButton, temas }) => {
   if (temas.length === 0) {
@@ -25,23 +27,34 @@ const SpeaksDaily = ({ showButton, temas }) => {
   }, []);
 
   const nextPerson = () => {
-    if (arraySpeaks.length < 3) {
-      setDistable(true);
-    }
     arraySpeaks.splice(randomPerson, 1);
     const rndInt = randomIntFromInterval(0, arraySpeaks.length - 1);
+
     setRandomPerson(rndInt);
   };
 
   const speaker = (
     <div>
-      <S.speaksMain>
-        <S.speaksName>{arraySpeaks[randomPerson].name}</S.speaksName>
-        <S.speaksImage
-          src={ arraySpeaks[randomPerson].image }
-          alt={ arraySpeaks[randomPerson].image }
-        />
-      </S.speaksMain>
+      {arraySpeaks.length < 2
+        ? (
+          <S.speaksMain>
+            <S.speaksName>The End</S.speaksName>
+            <S.speaksImage
+              src={ TheEnd }
+              alt="The End"
+            />
+          </S.speaksMain>
+        )
+        : (
+          <S.speaksMain>
+            <S.speaksName>{arraySpeaks[randomPerson].name}</S.speaksName>
+            <S.speaksImage
+              src={ arraySpeaks[randomPerson].image }
+              alt={ arraySpeaks[randomPerson].image }
+            />
+          </S.speaksMain>
+        )}
+
       {showButton
         ? (
           <S.buttonNextPerson

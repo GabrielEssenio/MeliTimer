@@ -8,6 +8,7 @@ import fotoAudience from '../images/Background/FotoAudience2.jpeg';
 import casamentoYan from '../images/Background/CasamentoYan.png';
 import fotoGrowth from '../images/Background/fotoGrowth.jpeg';
 import aniversarioDaniel from '../images/Background/AniversarioDaniel.png';
+import bemVindaAngelica from '../images/Background/bemVindaAngelica.png';
 
 class Header extends Component {
   render() {
@@ -15,14 +16,14 @@ class Header extends Component {
     return (
       <header>
         <select value={ temas } onChange={ handleChange } className="custom-select">
-          <option value={ JSON.stringify(speakDaily) }>Daily Normal</option>
-          <option value={ JSON.stringify(speaksShadow) } selected>App Shadow</option>
+          <option value={ JSON.stringify(speakDaily) } selected>Daily Normal</option>
+          <option value={ JSON.stringify(speaksShadow) }>App Shadow</option>
           <option value={ JSON.stringify(speaksChildren) }>Criança</option>
           <option value={ JSON.stringify(speaksBrasil) }>Brasil</option>
         </select>
         <h1>
-          Feliz Aniversário
-          <span className="title-spotlight">  Daniel</span>
+          Bem vinda de volta
+          <span className="title-spotlight"> Angelica</span>
         </h1>
         <div>
 
@@ -34,9 +35,10 @@ class Header extends Component {
             <option value={ fotoGrowth } selected>Team Growth</option>
             <option value={ fotoAudience }>Team Audience</option>
             <option value={ brasilCopa }>Copa do Brasil</option>
-            <option value={ diaDasCriancas } selected>Dia Das Crianças</option>
-            <option value={ casamentoYan } selected>Casamento do Yan</option>
-            <option value={ aniversarioDaniel } selected>Aniversário Daniel</option>
+            <option value={ diaDasCriancas }>Dia Das Crianças</option>
+            <option value={ casamentoYan }>Casamento do Yan</option>
+            <option value={ aniversarioDaniel }>Aniversário Daniel</option>
+            <option value={ bemVindaAngelica }>Bem Vinda Angelica </option>
           </select>
         </div>
       </header>
