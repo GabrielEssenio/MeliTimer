@@ -35,7 +35,7 @@ const SpeaksDaily = ({ showButton, temas }) => {
 
   const speaker = (
     <div>
-      {arraySpeaks.length < 2
+      {arraySpeaks.length === 0
         ? (
           <S.speaksMain>
             <S.speaksName>The End</S.speaksName>
