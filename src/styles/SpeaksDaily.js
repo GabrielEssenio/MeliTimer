@@ -16,6 +16,7 @@ color: rgb(5, 218, 218);
 
 export const speaksImage = styled.img`
     width: 350px;
+    height: 350px;
 `;
 
 export const buttonNextPerson = styled.button`
@@ -30,4 +31,9 @@ export const buttonNextPerson = styled.button`
     text-transform: uppercase;
     font-weight: 750;
     font-weight: bold;
+`;
+
+export const speaksRow = styled.div`
+display: flex;
+flex-direction: row;
 `;

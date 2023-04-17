@@ -10,8 +10,9 @@ import PropTypes from 'prop-types';
 import * as S from '../styles/SpeaksDaily';
 import { speakDaily } from '../utils/speaks';
 import TheEnd from '../images/TheEnd/theend.jpg';
+import Angelica from '../images/Daily/Angelica.jpeg';
 
-const SpeaksDaily = ({ showButton, temas }) => {
+const SpeaksDaily = ({ showButton, temas, backgrounds }) => {
   if (temas.length === 0) {
     temas = JSON.stringify(speakDaily);
   }
@@ -67,10 +68,24 @@ const SpeaksDaily = ({ showButton, temas }) => {
         : <div />}
     </div>
   );
+
+  const angelica = (
+    (
+      <S.speaksMain>
+        <S.speaksName>Angelica Oliveira</S.speaksName>
+        <S.speaksImage
+          src={ Angelica }
+          alt="Angelica Oliveira"
+        />
+      </S.speaksMain>
+    )
+  );
+
   return (
-    <div>
+    <S.speaksRow>
+      {angelica}
       {speaker}
-    </div>
+    </S.speaksRow>
   );
 };
 
