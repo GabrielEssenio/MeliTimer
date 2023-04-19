@@ -9,21 +9,37 @@ import casamentoYan from '../images/Background/CasamentoYan.png';
 import fotoGrowth from '../images/Background/fotoGrowth.jpeg';
 import aniversarioDaniel from '../images/Background/AniversarioDaniel.png';
 import bemVindaAngelica from '../images/Background/bemVindaAngelica.png';
+import iconTimer from '../images/Icons/timer.png';
+import iconAudience from '../images/Icons/icon-audience.png';
+import logoAudiencePrata from '../images/Icons/audiences-prata.jpg';
+import logoAudienceDourado from '../images/Icons/audiences-dourado.jpg';
+import SideBar from './SideBar';
 
 class Header extends Component {
   render() {
     const { handleChange, temas, backgrounds, handleChangeBackGrounds } = this.props;
     return (
-      <header>
+      <header className="header-container">
+        <SideBar />
+
+        <img
+          className="logo-audience"
+          src={ logoAudienceDourado }
+          alt="Logo Audience"
+        />
         <select value={ temas } onChange={ handleChange } className="custom-select">
-          <option value={ JSON.stringify(speakDaily) } selected>Daily Normal</option>
-          <option value={ JSON.stringify(speaksShadow) }>App Shadow</option>
-          <option value={ JSON.stringify(speaksChildren) }>Criança</option>
-          <option value={ JSON.stringify(speaksBrasil) }>Brasil</option>
+          <option value={ JSON.stringify(speakDaily) } selected>Normal Daily</option>
+          <option value={ JSON.stringify(speaksShadow) }>App Daily</option>
+          <option value={ JSON.stringify(speaksChildren) }>Children Daily</option>
+          <option value={ JSON.stringify(speaksBrasil) }>Brazil Daily</option>
         </select>
-        <h1>
-          Bem vinda de volta
-          <span className="title-spotlight"> Angelica</span>
+        <h1 className="title-header">
+          <img className="icon-audience" src={ iconAudience } alt="icon-audience" />
+          Team
+          <span className="title-spotlight"> Audience </span>
+          Daily
+          <img className="icon-audience" src={ iconAudience } alt="icon-audience" />
+          <img className="icon-timer" src={ iconTimer } alt="icon-timer" />
         </h1>
         <div>
 
@@ -41,6 +57,8 @@ class Header extends Component {
             <option value={ bemVindaAngelica }>Bem Vinda Angelica </option>
           </select>
         </div>
+        <img className="logo-audience" src={ logoAudiencePrata } alt="Logo Audience" />
+
       </header>
     );
   }

@@ -2,12 +2,17 @@
 import styled from 'styled-components';
 
 export const mainContainer = styled.div`
-    background-image: url(${(props) => props.inputBackground});
-    height: 100vh;
-    background-size:contain;
+height: 100vh;
 `;
 
-export const contentApp = styled.div`
+export const imageContainer = styled.div`
+    height: 100%;
+    background-position:center;
+    background-size: contain;
+    background-image: url(${(props) => props.inputBackground});
+`;
+
+export const subContainer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;

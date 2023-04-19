@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable max-len */
 /* eslint-disable react/jsx-curly-spacing */
 import React, { Component } from 'react';
@@ -6,6 +7,7 @@ import Header from '../components/Header';
 import MainButtons from '../components/MainButtons';
 import Timer from '../components/Timer';
 import SpeaksDaily from '../components/SpeaksDaily';
+import Action from '../components/Action';
 import TeamAudience from '../components/TeamAudience';
 import fotoGrowth from '../images/Background/fotoGrowth.jpeg';
 
@@ -131,12 +133,15 @@ class TimerPage extends Component {
   render() {
     const { seconds, minutes, showAnimation, showPerson, temas, backgrounds } = this.state;
     return (
-      <S.mainContainer inputBackground={backgrounds}>
-
+      <S.mainContainer>
         <Header handleChange={this.handleChange} temas={temas} backgrounds={backgrounds} handleChangeBackGrounds={this.handleChangeBackGrounds} />
-        <S.contentApp>
-          <div className="App">
-            {!showAnimation
+
+        <S.imageContainer inputBackground={backgrounds}>
+          <S.subContainer>
+
+            <Action />
+            <div className="App">
+              {!showAnimation
           && <Timer
             sec={seconds}
             min={minutes}
@@ -144,18 +149,18 @@ class TimerPage extends Component {
             start={this.startTimer}
             reset={this.stopTimer}
           />}
-            {!showAnimation
+              {!showAnimation
           && <MainButtons
             startTimer={this.startTimer}
             pauseTimer={this.pauseTimer}
             stopTimer={this.stopTimer}
           />}
-          </div>
-          {!showPerson && <TeamAudience />}
-          {!showAnimation && showPerson
+            </div>
+            {!showPerson && <TeamAudience />}
+            {!showAnimation && showPerson
           && <SpeaksDaily showButton temas={temas} backgrounds={backgrounds} />}
-          {!showAnimation}
-        </S.contentApp>
+          </S.subContainer>
+        </S.imageContainer>
       </S.mainContainer>
     );
   }

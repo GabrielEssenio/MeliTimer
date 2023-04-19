@@ -10,82 +10,78 @@ import PropTypes from 'prop-types';
 import * as S from '../styles/SpeaksDaily';
 import { speakDaily } from '../utils/speaks';
 import TheEnd from '../images/TheEnd/theend.jpg';
-import Angelica from '../images/Daily/Angelica.jpeg';
 
-const SpeaksDaily = ({ showButton, temas, backgrounds }) => {
+const SpeaksDaily = ({ showButton, temas }) => {
   if (temas.length === 0) {
     temas = JSON.stringify(speakDaily);
   }
   const [disable, setDistable] = React.useState(false);
   const [randomPerson, setRandomPerson] = React.useState(0);
+  const [numbNext, setNumbNext] = React.useState(1);
   const [arraySpeaks, setArraySpeaks] = React.useState(JSON.parse(temas));
-
-  const randomIntFromInterval = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
+  const [loading, setLoading] = React.useState(true);
 
   useEffect(() => {
-    const rndInt = randomIntFromInterval(0, arraySpeaks.length - 1);
-    setRandomPerson(rndInt);
+    arraySpeaks.sort(() => (Math.random() > 0.5 ? 1 : -1));
+    setLoading(false);
   }, []);
 
   const nextPerson = () => {
-    arraySpeaks.splice(randomPerson, 1);
-    const rndInt = randomIntFromInterval(0, arraySpeaks.length - 1);
-
-    setRandomPerson(rndInt);
+    setRandomPerson(randomPerson + 1);
+    setNumbNext(numbNext + 1);
   };
 
-  const speaker = (
+  const nowSpeaker = (
     <div>
-      {arraySpeaks.length === 0
-        ? (
-          <S.speaksMain>
-            <S.speaksName>The End</S.speaksName>
-            <S.speaksImage
-              src={ TheEnd }
-              alt="The End"
-            />
-          </S.speaksMain>
-        )
-        : (
-          <S.speaksMain>
-            <S.speaksName>{arraySpeaks[randomPerson].name}</S.speaksName>
-            <S.speaksImage
-              src={ arraySpeaks[randomPerson].image }
-              alt={ arraySpeaks[randomPerson].image }
-            />
-          </S.speaksMain>
-        )}
+      <S.speaksMain>
+        <S.speaksName>{arraySpeaks[randomPerson].name}</S.speaksName>
+        <S.speaksImage
+          src={ arraySpeaks[randomPerson].image }
+          alt={ arraySpeaks[randomPerson].image }
+        />
+      </S.speaksMain>
+      <S.buttonNextPerson
+        onClick={ nextPerson }
+        disabled={ numbNext === arraySpeaks.length }
+      >
+        Next
+      </S.buttonNextPerson>
 
-      {showButton
-        ? (
-          <S.buttonNextPerson
-            onClick={ nextPerson }
-            disabled={ disable }
-          >
-            Next
-          </S.buttonNextPerson>
-        )
-        : <div />}
     </div>
   );
 
-  const angelica = (
-    (
-      <S.speaksMain>
-        <S.speaksName>Angelica Oliveira</S.speaksName>
-        <S.speaksImage
-          src={ Angelica }
-          alt="Angelica Oliveira"
-        />
-      </S.speaksMain>
-    )
+  const nextSpeaker = (
+    numbNext === arraySpeaks.length
+      ? (
+        <S.speaksMain>
+          <S.speaksName>The End</S.speaksName>
+          <S.speaksImage
+            src={ TheEnd }
+            alt="The End"
+          />
+        </S.speaksMain>
+      )
+      : (
+        <S.speaksMain>
+          <S.speaksName>{arraySpeaks[numbNext].name}</S.speaksName>
+          <S.speaksImage
+            src={ arraySpeaks[numbNext].image }
+            alt={ arraySpeaks[numbNext].image }
+          />
+        </S.speaksMain>
+      )
+
   );
 
   return (
-    <S.speaksRow>
-      {angelica}
-      {speaker}
-    </S.speaksRow>
+    loading ? <div />
+      : (
+        <S.speaksRow>
+          {nowSpeaker}
+          {nextSpeaker}
+          )
+        </S.speaksRow>
+      )
   );
 };
 

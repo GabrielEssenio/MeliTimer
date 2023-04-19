@@ -8,34 +8,39 @@ body {
   height: 100vh;
 }
 
-header {
+.header-container {
   font-family: "Raleway", serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to left, rgba(168, 13, 148, 0.987), rgb(0, 255, 217));
+  background-image: linear-gradient(to left, rgb(221, 233, 2), rgb(25, 53, 232));
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
   width: 100%;
-  color: rgb(0, 255, 217);
-  height: 130px;
+  color: rgb(221, 233, 2);
+  height: 120px;
   font-weight: bold;
+  justify-content: space-evenly;
 }
+
+
 
 a {
   text-decoration: none;
-  color: cyan;
+  color: rgb(25, 53, 232);
+  ;
 }
 
 a:hover {
-  color: cyan;
+  color: rgb(25, 53, 232);
+  ;
   font-weight: 600;
   text-decoration: underline;
 }
 
 .title-spotlight {
-  color: rgb(0, 8, 255);
+  color: rgb(25, 53, 232);
 }
 
 #root {
@@ -79,7 +84,7 @@ a:hover {
 .timer-container {
   margin-top: 40px;
   font-size: 3em;
-  color: rgb(5, 218, 218);
+  color: rgb(221, 233, 2);
   width: 48%;
 }
 
@@ -89,8 +94,9 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(5, 218, 218);
+  background-color: rgb(221, 233, 2);
   padding: 10px 5px;
+  border-radius: 30px;
 }
 
 .dial-pad-container button {
@@ -112,14 +118,14 @@ a:hover {
 }
 
 .main-buttons button {
-  color: #0400ff;
+  color: rgb(0, 8, 255);
   bottom: 0px;
   border: none;
   margin: 5px;
   margin-bottom: 10px;
   padding: 5px 10px;
   border-radius: 5px;
-  background-color: rgb(5, 218, 218);
+  background-color: rgb(221, 233, 2);
   text-transform: uppercase;
   font-weight: 600;
   width: 40px;
@@ -217,15 +223,15 @@ a:hover {
   transform: translate(0, 5%);
 }
 
-/* Estilização básica do select */
+
 select {
   padding: 10px;
   font-size: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
   appearance: none;
-  background-color: rgb(5, 218, 218);
-  color: rgb(0, 2, 38)
+  background-color: rgb(242, 255, 4);
+  color: rgb(0, 8, 255)
 }
 
 /* Mudança de cor da seta */
@@ -238,12 +244,105 @@ select::after {
   color: #999;
 }
 
-/* Remove a seta nativa */
 select:focus::after,
 select:active::after {
   display: none;
 }
 
+
 .custom-select {
-  margin: 0px 30px 0px 30px;
+  padding: 10px 10px 10px 10px;
+  margin: 0px 20px 0px 20px;
+  text-align: center;
+}
+
+.icon-timer {
+  width: 40px;
+}
+
+.icon-audience {
+  width: 40px;
+  padding: 0px 10px 0px 10px;
+}
+
+.logo-audience {
+  height: 100%;
+}
+
+.title-header {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -200px;
+  width: 200px;
+  background-color: #fff;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #0f0bfe;
+  border-bottom: 1px solid #ff0000;
+}
+
+.sidebar-h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.sidebar-button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.sidebar-button-open {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: fixed;
+  left: 10px;
+}
+
+.sidebar-nav {
+  padding: 10px;
+}
+
+.sidebar-ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-li {
+  margin: 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  color: rgb(35, 35, 35);
+}
+
+.sidebar-li:hover {
+  color: rgb(0, 0, 255);
+
+}
+
+.sidebar-u:last-child {
+  border-bottom: none;
 }
