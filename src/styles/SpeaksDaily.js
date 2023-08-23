@@ -20,22 +20,9 @@ export const speaksImage = styled.img`
     height: 350px;
 `;
 
-// const MyButton = styled.button.attrs(props => ({
-//     // Definir atributos adicionais com base na propriedade disabled
-//     disabled: props.disabled,
-//   }))
-//     /* Estilos para o botão quando estiver habilitado */
-//     background-color: ${props => props.disabled ? 'gray' : 'blue'};
-//     color: ${props => props.disabled ? 'lightgray' : 'white'};
-//     cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'};
-//   ;
-
-//   export default MyButton;
-
 export const buttonNextPerson = styled.button.attrs((props) => ({
   disabled: props.disabled,
 }))`
-    /* background-color: ${(props) => (props.disabled ? 'gray' : 'blue')}; */
     opacity: ${(props) => (props.disabled ? 0.5 : 1)};
     cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
     color: rgb(25, 53, 232);

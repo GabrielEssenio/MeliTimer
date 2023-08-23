@@ -1,12 +1,10 @@
 /* eslint-disable import/prefer-default-export */
 import styled from 'styled-components';
+import arraiaAudience from '../images/Background/ArraiaAudience.png';
 
 export const tbtPage = styled.div`
     height: 100vh;
-    background-image: url("./images/Background/FotoAudience.jpeg");
-    /* background-image: url("./images/FotoAudience.jpeg"); */
-    /* background-repeat: no-repeat; */
-    background-color: black;
+    background-image: ${`url(${arraiaAudience})`};
 `;
 
 export const contentTbt = styled.div`

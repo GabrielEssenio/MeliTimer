@@ -72,7 +72,7 @@ export const buttonDelete = styled.button`
 export const actions = styled.div`
      text-align: center;
      padding: 10px;
-     background: rgb(221, 233, 2);
+     background: rgb(239, 239, 0);
      color:rgb(25, 53, 232);
      border-radius: 30px;
      margin-top: 50px;

@@ -21,7 +21,7 @@ class MainButtons extends Component {
   soundPlay(src) {
     const sound = new Howl({
       src,
-      volume: 0.3,
+      volume: 0.1,
     });
     sound.play();
   }
@@ -64,7 +64,7 @@ class MainButtons extends Component {
 MainButtons.propTypes = {
   play: PropTypes.func,
   pause: PropTypes.func,
-  // stop: PropTypes.func,
+  stop: PropTypes.func,
 }.isRequired;
 
 export default MainButtons;

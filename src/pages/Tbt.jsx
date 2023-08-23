@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import HeaderTbt from '../components/HeaderTbt';
+import Header from '../components/Header';
 import TeamAudience from '../components/TeamAudience';
-import SpeaksDaily from '../components/SpeaksDaily';
+import ShowTbt from '../components/ShowTbt';
 import '../App.css';
 import * as T from '../styles/Tbt';
 
@@ -15,19 +15,15 @@ const Tbt = () => {
 
   return (
     <T.tbtPage>
-      <HeaderTbt />
+      <Header />
       <T.contentTbt>
         <div>
-          <TeamAudience />
-        </div>
-        <div>
-
           {showPerson
             ? (
               <div
                 data-aos="zoom-in-down"
               >
-                <SpeaksDaily showButton={ false } />
+                <ShowTbt showButton={ false } />
               </div>
             )
             : (

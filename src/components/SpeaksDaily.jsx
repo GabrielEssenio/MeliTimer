@@ -10,19 +10,22 @@ import PropTypes from 'prop-types';
 import * as S from '../styles/SpeaksDaily';
 import { speakDaily } from '../utils/speaks';
 import TheEnd from '../images/TheEnd/theend.jpg';
+import { getLocalStorage } from '../utils/localStorage';
 
 const SpeaksDaily = ({ showButton, temas }) => {
-  if (temas.length === 0) {
+  if (!temas || temas.length === 0) {
     temas = JSON.stringify(speakDaily);
   }
-  const [disable, setDistable] = React.useState(false);
   const [randomPerson, setRandomPerson] = React.useState(0);
   const [numbNext, setNumbNext] = React.useState(1);
   const [arraySpeaks, setArraySpeaks] = React.useState(JSON.parse(temas));
   const [loading, setLoading] = React.useState(true);
 
   useEffect(() => {
-    arraySpeaks.sort(() => (Math.random() > 0.5 ? 1 : -1));
+    const storageSpeakers = getLocalStorage('speakers') || arraySpeaks;
+    const selectedSpeakers = arraySpeaks.filter((speaker, index) => (speaker.checked === storageSpeakers[index].checked));
+    selectedSpeakers.sort(() => (Math.random() > 0.5 ? 1 : -1));
+    setArraySpeaks(selectedSpeakers);
     setLoading(false);
   }, []);
 
@@ -70,7 +73,6 @@ const SpeaksDaily = ({ showButton, temas }) => {
           />
         </S.speaksMain>
       )
-
   );
 
   return (

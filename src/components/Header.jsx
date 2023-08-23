@@ -1,14 +1,15 @@
 /* eslint-disable react/prop-types */
 import React, { Component } from 'react';
-import { speaksShadow, speakDaily, speaksChildren, speaksBrasil,
+import { speaksShadow, speakDaily, speaksChildren, speaksBrasil, speakersBarbie,
 } from '../utils/speaks';
-import brasilCopa from '../images/Background/copa2022.png';
-import diaDasCriancas from '../images/Background/dia-das-criancas.jpg';
-import fotoAudience from '../images/Background/FotoAudience2.jpeg';
+import brasilCopa from '../images/Background/Copa2022.png';
+import diaDasCriancas from '../images/Background/DiaDasCriancas.jpg';
+import fotoAudience from '../images/Background/FotoAudience.jpeg';
 import casamentoYan from '../images/Background/CasamentoYan.png';
-import fotoGrowth from '../images/Background/fotoGrowth.jpeg';
+import fotoGrowth from '../images/Background/FotoGrowth.jpeg';
 import aniversarioDaniel from '../images/Background/AniversarioDaniel.png';
-import bemVindaAngelica from '../images/Background/bemVindaAngelica.png';
+import bemVindaAngelica from '../images/Background/BemVindaAngelica.png';
+import barbie from '../images/Background/BarbieBackgroun.webp';
 import iconTimer from '../images/Icons/timer.png';
 import iconAudience from '../images/Icons/icon-audience.png';
 import logoAudiencePrata from '../images/Icons/audiences-prata.jpg';
@@ -28,10 +29,11 @@ class Header extends Component {
           alt="Logo Audience"
         />
         <select value={ temas } onChange={ handleChange } className="custom-select">
-          <option value={ JSON.stringify(speakDaily) } selected>Normal Daily</option>
+          <option value={ JSON.stringify(speakDaily) } selected>Daily</option>
           <option value={ JSON.stringify(speaksShadow) }>App Daily</option>
           <option value={ JSON.stringify(speaksChildren) }>Children Daily</option>
           <option value={ JSON.stringify(speaksBrasil) }>Brazil Daily</option>
+          <option value={ JSON.stringify(speakersBarbie) }>Barbie Daily</option>
         </select>
         <h1 className="title-header">
           <img className="icon-audience" src={ iconAudience } alt="icon-audience" />
@@ -52,13 +54,13 @@ class Header extends Component {
             <option value={ fotoAudience }>Team Audience</option>
             <option value={ brasilCopa }>Copa do Brasil</option>
             <option value={ diaDasCriancas }>Dia Das Crianças</option>
-            <option value={ casamentoYan }>Casamento do Yan</option>
+            <option value={ casamentoYan }>Casamento Yan</option>
             <option value={ aniversarioDaniel }>Aniversário Daniel</option>
             <option value={ bemVindaAngelica }>Bem Vinda Angelica </option>
+            <option value={ barbie }>Barbie</option>
           </select>
         </div>
         <img className="logo-audience" src={ logoAudiencePrata } alt="Logo Audience" />
-
       </header>
     );
   }

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable max-lines */
 /* eslint-disable no-multiple-empty-lines */
 /* eslint-disable sonarjs/no-duplicate-string */
@@ -13,8 +14,8 @@ import Marcelo from '../images/Daily/Marcelo.jpeg';
 import Pedro from '../images/Daily/Pedro.jpeg';
 import Wincenty from '../images/Daily/Wincenty.png';
 import Yan from '../images/Daily/Yan.jpeg';
-// import Deyvid from '../images/Daily/Deyvid.jpeg';
-// import Fernanda from '../images/Daily/Fernanda.jpeg';
+import Deyvid from '../images/Daily/Deyvid.jpg';
+import Fernanda from '../images/Daily/Fernanda.jpeg';
 
 import GabrielBrasil from '../images/BrasilCopa/GabrielBrasil.jpg';
 import BarbaraBrasil from '../images/BrasilCopa/BarbaraBrasil.jpg';
@@ -71,146 +72,205 @@ import DeyvidCrianca from '../images/Crianca/DeyvidCrianca.jpg';
 import FernandaCrianca from '../images/Crianca/FernandaCrianca.jpg';
 
 
+// Barbie Daily
+import GabrielBarbie from '../images/Barbie/GabrielBarbie.png';
+import BarbaraBarbie from '../images/Barbie/BarbaraBarbie.png';
+import AngelicaBarbie from '../images/Barbie/AngelicaBarbie.png';
+import DanielBarbie from '../images/Barbie/DanielBarbie.png';
+import IgorBarbie from '../images/Barbie/IgorBarbie.png';
+import LiraBarbie from '../images/Barbie/LiraBarbie.png';
+import MarceloBarbie from '../images/Barbie/MarceloBarbie.png';
+import PedroBarbie from '../images/Barbie/PedroBarbie.png';
+import WincentyBarbie from '../images/Barbie/WincentyBarbie.png';
+import YanBarbie from '../images/Barbie/YanBarbie.png';
+import FernandaBarbie from '../images/Barbie/FernandaBarbie.png';
+import DeyvidBarbie from '../images/Barbie/DeyvidBarbie.png';
+
+
 export const speaksBrasil = [
   {
-    name: 'Daniel da Silva',
-    image: DanielBrasil,
+    name: 'Yan Broetto',
+    image: YanBrasil,
+    checked: true,
   },
+
   {
     name: 'Deyvid da Silva',
     image: DeyvidBrasil,
+    checked: true,
   },
   {
     name: 'Barbara Flavia',
     image: BarbaraBrasil,
+    checked: true,
   },
 
   {
     name: 'Igor Ferreira',
     image: IgorBrasil,
+    checked: true,
   },
   {
     name: 'Pedro Lavor',
     image: PedroBrasil,
+    checked: true,
   },
   {
     name: 'Wincenty Lech',
     image: WincentyBrasil,
+    checked: true,
   },
-  {
-    name: 'Yan Broetto',
-    image: YanBrasil,
-  },
-
   {
     name: 'Marcelo Garces',
     image: MarceloBrasil,
+    checked: true,
   },
   {
     name: 'Luiz Lira ',
     image: LiraBrasil,
+    checked: true,
   },
   {
     name: 'Angelica Oliveira',
     image: AngelicaBrasil,
+    checked: true,
   },
   {
     name: 'Fernanda Andrade ',
     image: FernandaBrasil,
+    checked: true,
   },
-
+  {
+    name: 'Daniel da Silva',
+    image: DanielBrasil,
+    checked: true,
+  },
   {
     name: 'Gabriel Essênio',
     image: GabrielBrasil,
+    checked: true,
   },
 ];
 
 export const speakDaily = [
   {
-    name: 'Daniel da Silva',
-    image: Daniel,
+    name: 'Yan Broetto',
+    image: Yan,
+    checked: true,
+  },
+  {
+    name: 'Deyvid Fernandes',
+    image: Deyvid,
+    checked: true,
   },
   {
     name: 'Barbara Flavia',
     image: Barbara,
+    checked: true,
   },
   {
     name: 'Igor Ferreira',
     image: Igor,
+    checked: true,
   },
   {
     name: 'Pedro Lavor',
     image: Pedro,
+    checked: true,
   },
   {
     name: 'Wincenty Lech',
     image: Wincenty,
+    checked: true,
   },
-  {
-    name: 'Yan Broetto',
-    image: Yan,
-  },
-
   {
     name: 'Marcelo Garces',
     image: Marcelo,
+    checked: true,
   },
   {
     name: 'Luiz Lira ',
     image: Lira,
+    checked: true,
   },
   {
     name: 'Angelica Oliveira',
     image: Angelica,
+    checked: true,
+  },
+  {
+    name: 'Fenanda Andrade',
+    image: Fernanda,
+    checked: true,
+  },
+  {
+    name: 'Daniel da Silva',
+    image: Daniel,
+    checked: true,
   },
   {
     name: 'Gabriel Essênio',
     image: Gabriel,
+    checked: true,
   },
+
 ];
 
 export const speaksChildren = [
   {
-    image: DanielCrianca,
+    image: YanCrianca,
+    checked: true,
   },
   {
     image: DeyvidCrianca,
-  },
-  {
-    image: YanCrianca,
-  },
-  {
-    image: IgorCrianca,
-  },
-  {
-    image: PedroCrianca,
-  },
-  {
-    image: GabrielCrianca,
-  },
-  {
-    image: FernandaCrianca,
-  },
-  {
-    image: AngelicaCrianca,
+    checked: true,
   },
   {
     image: BarbaraCrianca,
+    checked: true,
   },
   {
-    image: LiraCrianca,
-  }, {
-    image: MarceloCrianca,
+    image: IgorCrianca,
+    checked: true,
+  },
+  {
+    image: PedroCrianca,
+    checked: true,
   },
   {
     image: WincentyBrasil,
+    checked: true,
+  },
+  {
+    image: MarceloCrianca,
+    checked: true,
+  },
+  {
+    image: LiraCrianca,
+    checked: true,
+  },
+  {
+    image: AngelicaCrianca,
+    checked: true,
+  },
+  {
+    image: FernandaCrianca,
+    checked: true,
+  },
+  {
+    image: DanielCrianca,
+    checked: true,
+  },
+  {
+    image: GabrielCrianca,
+    checked: true,
   },
 ];
 
 export const speaksShadow = [
   {
-    name: 'Daniel da Silva',
-    image: DanielShadow,
+    name: 'Yan Broetto',
+    image: YanShadow,
   },
   {
     name: 'Deyvid da Silva',
@@ -220,7 +280,6 @@ export const speaksShadow = [
     name: 'Barbara Flavia',
     image: BarbaraShadow,
   },
-
   {
     name: 'Igor Ferreira',
     image: IgorShadow,
@@ -234,11 +293,6 @@ export const speaksShadow = [
     image: WincentyShadow,
   },
   {
-    name: 'Yan Broetto',
-    image: YanShadow,
-  },
-
-  {
     name: 'Marcelo Garces',
     image: MarceloShadow,
   },
@@ -251,11 +305,79 @@ export const speaksShadow = [
     image: AngelicaShadow,
   },
   {
-    name: 'Fernanda Andrade ',
+    name: 'Fernanda Andrade',
     image: FernandaShadow,
+  },
+  {
+    name: 'Daniel da Silva',
+    image: DanielShadow,
   },
   {
     name: 'Gabriel Essênio',
     image: GabrielShadow,
+  },
+];
+
+export const speakersBarbie = [
+  {
+    name: 'Yan Broetto',
+    image: YanBarbie,
+    checked: true,
+  },
+  {
+    name: 'Deyvid da Silva',
+    image: DeyvidBarbie,
+    checked: true,
+  },
+  {
+    name: 'Barbara Flavia',
+    image: BarbaraBarbie,
+    checked: true,
+  },
+
+  {
+    name: 'Igor Ferreira',
+    image: IgorBarbie,
+    checked: true,
+  },
+  {
+    name: 'Pedro Lavor',
+    image: PedroBarbie,
+    checked: true,
+  },
+  {
+    name: 'Wincenty Lech',
+    image: WincentyBarbie,
+    checked: true,
+  },
+  {
+    name: 'Marcelo Garces',
+    image: MarceloBarbie,
+    checked: true,
+  },
+  {
+    name: 'Luiz Lira ',
+    image: LiraBarbie,
+    checked: true,
+  },
+  {
+    name: 'Angelica Oliveira',
+    image: AngelicaBarbie,
+    checked: true,
+  },
+  {
+    name: 'Fernanda Andrade ',
+    image: FernandaBarbie,
+    checked: true,
+  },
+  {
+    name: 'Daniel da Silva',
+    image: DanielBarbie,
+    checked: true,
+  },
+  {
+    name: 'Gabriel Essênio',
+    image: GabrielBarbie,
+    checked: true,
   },
 ];

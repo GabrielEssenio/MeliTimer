@@ -1,5 +1,7 @@
+/* eslint-disable react/jsx-max-depth */
 /* eslint-disable react/button-has-type */
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../App.css';
 import { BsLayoutSidebarInset } from 'react-icons/bs';
 
@@ -23,8 +25,16 @@ function Sidebar() {
         </div>
         <nav className="sidebar-nav">
           <ul className="sidebar-ul">
-            <li className="sidebar-li">Daily</li>
-            <li className="sidebar-li">TBT</li>
+
+            <li className="sidebar-li">
+              <Link to="/">DAILY</Link>
+            </li>
+            <li className="sidebar-li">
+              <Link to="/tbt">TBT</Link>
+            </li>
+            <li className="sidebar-li">
+              <Link to="/checkbox-daily">SPEAKERS</Link>
+            </li>
           </ul>
         </nav>
       </div>

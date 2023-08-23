@@ -12,13 +12,13 @@ body {
   font-family: "Raleway", serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to left, rgb(221, 233, 2), rgb(25, 53, 232));
+  background-image: linear-gradient(to left, rgb(239, 239, 0), rgb(25, 53, 232));
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
   width: 100%;
-  color: rgb(221, 233, 2);
+  color: rgb(239, 239, 0);
   height: 120px;
   font-weight: bold;
   justify-content: space-evenly;
@@ -84,7 +84,7 @@ a:hover {
 .timer-container {
   margin-top: 40px;
   font-size: 3em;
-  color: rgb(221, 233, 2);
+  color: rgb(239, 239, 0);
   width: 48%;
 }
 
@@ -230,7 +230,7 @@ select {
   border: 1px solid #ccc;
   border-radius: 5px;
   appearance: none;
-  background-color: rgb(242, 255, 4);
+  background-color: rgb(239, 239, 0);
   color: rgb(0, 8, 255)
 }
 
