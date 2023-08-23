@@ -9,7 +9,7 @@ import Timer from '../components/Timer';
 import SpeaksDaily from '../components/SpeaksDaily';
 import Action from '../components/Action';
 import TeamAudience from '../components/TeamAudience';
-import fotoGrowth from '../images/Background/FotoGrowth.jpeg';
+import fotoGrowth from '../images/Background/Growth.jpeg';
 
 import * as S from '../styles/TimerPage';
 
