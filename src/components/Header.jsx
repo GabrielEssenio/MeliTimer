@@ -6,7 +6,7 @@ import brasilCopa from '../images/Background/Copa2022.png';
 import diaDasCriancas from '../images/Background/DiaDasCriancas.jpg';
 import fotoAudience from '../images/Background/FotoAudience.jpeg';
 import casamentoYan from '../images/Background/CasamentoYan.png';
-import fotoGrowth from '../images/Background/FotoGrowth.jpeg';
+import fotoGrowth from '../images/Background/Growth.jpeg';
 import aniversarioDaniel from '../images/Background/AniversarioDaniel.png';
 import bemVindaAngelica from '../images/Background/BemVindaAngelica.png';
 import barbie from '../images/Background/BarbieBackgroun.webp';
