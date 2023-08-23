@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { speaksShadow, speakDaily, speaksChildren, speaksBrasil, speakersBarbie,
 } from '../utils/speaks';
-import brasilCopa from '../images/Background/Copa2022.png';
+import brasilCopa from '../images/Background/Copa.png';
 import diaDasCriancas from '../images/Background/DiaDasCriancas.jpg';
 import fotoAudience from '../images/Background/FotoAudience.jpeg';
 import casamentoYan from '../images/Background/CasamentoYan.png';
