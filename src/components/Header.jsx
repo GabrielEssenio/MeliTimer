@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/prop-types */
 import React, { Component } from 'react';
 import { speaksShadow, speakDaily, speaksChildren, speaksBrasil, speakersBarbie,
@@ -10,6 +11,7 @@ import fotoGrowth from '../images/Background/Growth.jpeg';
 import aniversarioDaniel from '../images/Background/AniversarioDaniel.png';
 import bemVindaAngelica from '../images/Background/BemVindaAngelica.png';
 import barbie from '../images/Background/BarbieBackgroun.webp';
+import babyComing from '../images/Background/BackgroundBaby.png';
 import iconTimer from '../images/Icons/timer.png';
 import iconAudience from '../images/Icons/icon-audience.png';
 import logoAudiencePrata from '../images/Icons/audiences-prata.jpg';
@@ -37,8 +39,7 @@ class Header extends Component {
         </select>
         <h1 className="title-header">
           <img className="icon-audience" src={ iconAudience } alt="icon-audience" />
-          Team
-          <span className="title-spotlight"> Audience </span>
+          <span className="title-spotlight"> Baby Audience </span>
           Daily
           <img className="icon-audience" src={ iconAudience } alt="icon-audience" />
           <img className="icon-timer" src={ iconTimer } alt="icon-timer" />
@@ -58,6 +59,7 @@ class Header extends Component {
             <option value={ aniversarioDaniel }>Aniversário Daniel</option>
             <option value={ bemVindaAngelica }>Bem Vinda Angelica </option>
             <option value={ barbie }>Barbie</option>
+            <option value={ babyComing }>Baby Coming</option>
           </select>
         </div>
         <img className="logo-audience" src={ logoAudiencePrata } alt="Logo Audience" />
